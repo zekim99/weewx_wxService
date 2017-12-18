@@ -1,0 +1,3 @@
+node_modules/
+osx_daemon_install.js
+osx_daemon_uninstall.js
