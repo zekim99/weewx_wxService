@@ -1,4 +1,5 @@
-var http = require('http');
+//var http = require('http');
+var https = require('https');
 const PORT=8080;
 var _fullBody = '';
 var wx;
@@ -65,10 +66,12 @@ function handleRequest(req, res){
 
 
 //Create a server
-var server = http.createServer(handleRequest);
+//var server = http.createServer(handleRequest);
+var server = https.createServer(handleRequest);
 
 //Lets start our server
 server.listen(PORT, function(){
     //Callback triggered when server is successfully listening. Hurray!
-    console.log("Server listening on: http://localhost:%s", PORT);
+    //console.log("Server listening on: http://localhost:%s", PORT);
+    console.log("Server listening on: https://localhost:%s", PORT);
 });
