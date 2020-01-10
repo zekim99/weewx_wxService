@@ -3,6 +3,10 @@ var https = require('https');
 const PORT=8080;
 var _fullBody = '';
 var wx;
+const options = {
+  cert: fs.readFileSync("/etc/apache2/ssl/fe2b4db8c986695b.crt"),
+  key: fs.readFileSync("/etc/apache2/ssl/private/www_sahaleeweather_com.key") 
+}
 
 //We need a function which handles requests and send response
 function handleRequest(req, res){
