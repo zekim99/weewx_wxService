@@ -18,7 +18,7 @@ app.use(helmet());
 
 // set up for ssl
 const options = {
-  cert: fs.readFileSync('/etc/apache2/ssl/fe2b4db8c986695b.crt'),
+  cert: fs.readFileSync('/etc/apache2/ssl/c255b956a523b93.crt'),
   key: fs.readFileSync('/etc/apache2/ssl/private/www_sahaleeweather_com.key'),
   dhparam: fs.readFileSync('/etc/apache2/ssl/dh-strong.pem')
 }
