@@ -74,7 +74,7 @@ app.get('/', function (req, res) {
 //Create a server
 var server = https.createServer(options, app);
 
-//Lets start our server
-server.listen(PORT, function(){
-    console.log("Server listening on: https://localhost:%s", PORT);
-});
+server.listen(PORT, "0.0.0.0");
+if (server.listening)
+  console.log("Server listening on: https://0.0.0.0:%s, PORT");
+
